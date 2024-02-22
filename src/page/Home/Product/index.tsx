@@ -17,7 +17,7 @@ export function Product({ trendingProduct }: ProductProps) {
 
     return (
         <ProductContainer className="products">
-            <div className="container">
+            <div className="container_product">
                 {
                     trendingProduct.map((curElm) => {
                         return (

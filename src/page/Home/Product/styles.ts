@@ -4,11 +4,11 @@ export const ProductContainer = styled.div`
          & {
                 max-width: 100%;
                 
-                .container .box:hover .img_box .icon {
+                .container_product .box:hover .img_box .icon {
                     margin-left: -4.5vw;
                 }
 
-                .container {
+                .container_product {
                     width: 100%;
                     display: flex;
                     flex-wrap: wrap;
@@ -98,6 +98,7 @@ export const ProductContainer = styled.div`
                             }
                         }
                     }
+
                 }
             }
 `
