@@ -61,7 +61,7 @@ export const NavLink = styled(Link)`
 
 export const Trending = styled.section`
     & {
-        padding: 1.2rem 1.8rem;
+        padding: 1.2rem 0.5rem;
     width: 100%;
     }
 
@@ -326,7 +326,10 @@ export const Banners = styled.section`
         display: flex;
 
         .left_box {
-            width: 24%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             .box {
                 margin-top: 0.6rem;
@@ -334,13 +337,18 @@ export const Banners = styled.section`
         }
 
         .right_box {
-            width: 75%;
+            width: 79.5%;
 
             .top {
                 max-width: 100%;
                 display: flex;
                 justify-content: space-between;
                 margin-top: 0.6rem;
+                height: 25vh;
+
+             img:first-child {
+                width: 78%;
+            }
             }
 
             .bottom {
@@ -357,7 +365,7 @@ export const Banners = styled.section`
 `
 
 export const ProductType = styled.section`
-    padding: 1.2rem 1.8rem;
+    padding: 1.2rem 2rem;
     width: 100%;
 
     .productype {

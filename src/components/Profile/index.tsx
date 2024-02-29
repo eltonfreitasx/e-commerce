@@ -21,8 +21,8 @@ export function Profile() {
         isAuthenticated && (
             <ProfileInfo>
                 <div className="icon">
-                     <CiUser /> 
-                     {/* <img src={user?.picture} alt={user?.name} />  */}
+                     {/* <CiUser />  */}
+                     <img src={user?.picture} alt={user?.name} />
                 </div>
                 <div className="info">
                     <h2>{user?.name}</h2>

@@ -17,7 +17,7 @@ export const Homeproduct =
             Name: 'Smart TV LED 40',
             price: '3.299',
             image: img1,
-            cat: '',
+            cat: 'tv',
             type: 'featured',
         },
 
@@ -26,7 +26,7 @@ export const Homeproduct =
             Name: 'Notebook Gamer',
             price: '2.999,00',
             image: img2,
-            cat: '',
+            cat: 'notbook',
             type: 'new',
         },
 
@@ -35,7 +35,7 @@ export const Homeproduct =
             Name: 'TicWatch Pro 5',
             price: '700,00',
             image: img3,
-            cat: '',
+            cat: 'clock',
             type: 'featured',
         },
 
@@ -44,7 +44,7 @@ export const Homeproduct =
             Name: 'Echo Studio ',
             price: '499,00',
             image: img4,
-            cat: '',
+            cat: 'soundbox',
             type: 'new',
         },
 
@@ -53,7 +53,7 @@ export const Homeproduct =
             Name: 'Logitech',
             price: '299,99',
             image: img5,
-            cat: '',
+            cat: 'camera',
             type: 'featured',
         },
 
@@ -62,7 +62,7 @@ export const Homeproduct =
             Name: 'Samsung Galaxy',
             price: '1.099,00',
             image: img6,
-            cat: '',
+            cat: 'phone',
             type: 'new',
         },
 
@@ -71,7 +71,7 @@ export const Homeproduct =
             Name: 'Novo Echo Show',
             price: '999,00',
             image: img7,
-            cat: '',
+            cat: 'soundbox',
             type: 'top',
         },
 
@@ -80,43 +80,43 @@ export const Homeproduct =
             Name: 'Echo Studio ',
             price: '549,99',
             image: img8,
-            cat: '',
+            cat: 'soundbox',
             type: 'top',
         },
 
         {
             id: 9,
-            Name: 'Echo Studio ',
+            Name: 'Tablet',
             price: '499,00',
             image: img9,
-            cat: '',
+            cat: 'tablet',
             type: 'top',
         },
 
         {
             id: 10,
-            Name: 'product1',
+            Name: 'Headset',
             price: '26',
             image: img10,
-            cat: '',
+            cat: 'phone',
             type: 'top',
         },
 
         {
             id: 11,
-            Name: 'product1',
+            Name: 'Alarme Clock',
             price: '26',
             image: img11,
-            cat: '',
+            cat: 'eletronics',
             type: 'featured',
         },
 
         {
             id: 12,
-            Name: 'product1',
+            Name: 'Tablet',
             price: '999,00',
             image: img9,
-            cat: '',
+            cat: 'tablet',
             type: 'new',
         },
     ]
