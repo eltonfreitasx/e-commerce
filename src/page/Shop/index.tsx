@@ -7,9 +7,18 @@ import { useState } from "react";
 import { Homeproduct } from './../../utils/home.product';
 import { AiFillEye, AiFillHeart } from "react-icons/ai";
 
-
 export function Shop() {
-  const [shop] = useState(Homeproduct);
+  const [shop, setShop] = useState(Homeproduct);
+
+  const Filter = (x: string) => {
+    setShop(Homeproduct.filter((product) => {
+      return product.cat === x;
+    }));
+  }
+
+  const allCateFilter = () => {
+    setShop(Homeproduct)
+  }
 
   return (
     <>
@@ -25,13 +34,14 @@ export function Shop() {
               </div>
               <div className="box">
                 <ul>
-                  <li># phone</li>
-                  <li># camera</li>
-                  <li># tv</li>
-                  <li># clock</li>
-                  <li># soundbox</li>
-                  <li># tablet</li>
-                  <li># eletronics</li>
+                <li onClick={() => allCateFilter ()}># All</li>
+                  <li onClick={() => Filter ("phone")}># phone</li>
+                  <li onClick={() => Filter ("camera")}># camera</li>
+                  <li onClick={() => Filter ("tv")}># tv</li>
+                  <li onClick={() => Filter ("clock")}># clock</li>
+                  <li onClick={() => Filter ("soundbox")}># soundbox</li>
+                  <li onClick={() => Filter ("tablet")}># tablet</li>
+                  <li onClick={() => Filter ("eletronics")}># eletronics</li>
                 </ul>
               </div>
             </div>
@@ -57,16 +67,15 @@ export function Shop() {
                     <div className="box">
                       <div className="img_box">
                         <img src={curElm.image} alt={curElm.Name} />
-                        <ul className="icon">
+                        <div className="icon">
                             <li><AiFillHeart /></li>
                             <li><AiFillEye /></li>
-                        </ul>
+                        </div>
                       </div>
                         <div className="detail">
                           <h3>{curElm.Name}</h3>
-                          <p>{curElm.price}</p>
+                          <p>$ {curElm.price}</p>
                           <button>Add to card</button>
-                          {/* 2:33:00 */}
                         </div>
                     </div>
                   )

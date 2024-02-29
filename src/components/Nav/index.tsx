@@ -3,15 +3,13 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { FiLogIn } from 'react-icons/fi';
 import { Header, NavLink } from './styles';
 import logo from './../../assets/logo.webp';
-
-import { useAuth0 } from "@auth0/auth0-react";
 import { CiLogout } from 'react-icons/ci';
+import { useAuth0 } from "@auth0/auth0-react";
 import { Profile } from '../Profile';
-
-
-
 export function Nav() {
     const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+
+    // 2:43:20
 
     return (
         <Header>
@@ -32,7 +30,7 @@ export function Nav() {
                         <input
                             placeholder="search"
                             type="text"
-                            value=""
+                            value={'search'}
                         />
                         <button>
                             <AiOutlineSearch />

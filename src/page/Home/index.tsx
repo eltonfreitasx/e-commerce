@@ -20,6 +20,7 @@ export function Home() {
     cat: string;
     type: string;
   }>>([]);
+  
   const [featuredProduct, setFeaturedProduct] = useState<Array<{
     id: number;
     Name: string;
@@ -28,6 +29,7 @@ export function Home() {
     cat: string;
     type: string;
   }>>([]);
+
   const [topProduct, setTopProduct] = useState<Array<{
     id: number;
     Name: string;
