@@ -38,7 +38,7 @@ export const ProductContainer = styled.div`
                                 margin-left: 0;
                                 margin-top: 0.6rem;
                                 transition: 0.3s;
-                                
+
                                 .icon_box {
                                     padding: 0.6rem 0.6rem;
                                     margin-top: 0.5rem;
@@ -47,9 +47,11 @@ export const ProductContainer = styled.div`
                                     background: #fff;
                                     color: #cd1e76;
                                     transition: 0.4s;
-                                    
+                                    border: none;
+
                                     border-radius: 12px;
                                     cursor: pointer;
+
 
                                     &:hover {
                                         color: #fff;
@@ -102,3 +104,43 @@ export const ProductContainer = styled.div`
                 }
             }
 `
+
+export const ModalProduct = styled.div`
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+	
+
+   div {
+    position: relative;
+    top: 4.375rem;
+    left: 15.625rem;
+
+    button {
+        position: relative;
+        bottom: 245px;
+        left: 600px;
+        background: none;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            color: #cd1e76;
+        }
+    }
+    
+
+img {
+    width: 30vw;
+    height: 50vh;
+    border-radius: 16px;
+}
+   }
+    `
+

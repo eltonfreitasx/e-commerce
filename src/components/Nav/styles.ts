@@ -78,6 +78,7 @@ export const Header = styled.header`
     .header .mid_header .user {
         display: flex;
         margin-right: 1.8rem;
+        margin-top: 0.5rem;
     }
 
     .header .mid_header .user .icon {
@@ -109,7 +110,9 @@ export const Header = styled.header`
     } */
 
     .header .last_header .nav {
-        margin-top: 0.9rem;
+        display: flex;
+        align-items: center;
+        height: 7vh;
     }
 
     .header .last_header .nav  ul {
@@ -118,7 +121,8 @@ export const Header = styled.header`
 
     .header .last_header .nav  ul li {
         list-style: none;
-
+        display: flex;
+        align-items: center;
     }
 
     .header .last_header .offer {
@@ -126,9 +130,10 @@ export const Header = styled.header`
         border-radius: 0.6rem;
         margin-right: 1.25rem;
         padding: 0.6rem 1.2rem;
+        display: flex;
+        align-items: center;
 
         p {
-            margin-top: 0.5rem;
             text-transform: uppercase;
             color: #232323;
             font-weight: 600;

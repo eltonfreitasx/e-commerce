@@ -1,5 +1,6 @@
-import { ProductContainer } from "./styles"
-import { AiFillEye, AiFillHeart } from "react-icons/ai"
+import { useState } from "react";
+import { ModalProduct, ProductContainer } from "./styles"
+import { AiFillCloseCircle, AiFillEye, AiFillHeart } from "react-icons/ai"
 
 interface ProductType {
     id: number;
@@ -7,13 +8,25 @@ interface ProductType {
     type: string;
     image: string;
     price: string;
-  }
+}
 
- interface ProductProps {
-    trendingProduct: ProductType[]; 
-  }
+interface ProductProps {
+    trendingProduct: ProductType[];
+}
 
 export function Product({ trendingProduct }: ProductProps) {
+    const [modal, setModal] = useState(false)
+    const [selectedProduct, setSelectedProduct] = useState<number | null>(null)
+
+    function openModal(EyeProduct: number) {
+        setSelectedProduct(EyeProduct);
+        setModal(true)
+    }
+
+    function closeModal() {
+        setSelectedProduct(null)
+        setModal(false)
+    }
 
     return (
         <ProductContainer className="products">
@@ -26,12 +39,12 @@ export function Product({ trendingProduct }: ProductProps) {
                                     <div className="img_box">
                                         <img src={curElm.image} alt="img" />
                                         <div className="icon">
-                                            <div className="icon_box">
+                                            <button onClick={() => openModal(curElm.id)} className="icon_box">
                                                 <AiFillEye />
-                                            </div>
-                                            <div className="icon_box">
+                                            </button>
+                                            <button className="icon_box">
                                                 <AiFillHeart />
-                                            </div>
+                                            </button>
                                         </div>
                                     </div>
                                     <div className="info">
@@ -40,6 +53,18 @@ export function Product({ trendingProduct }: ProductProps) {
                                         <button className="btn">Add to cart</button>
                                     </div>
                                 </div>
+                                {modal && selectedProduct === curElm.id && (
+                                    <ModalProduct>
+                                        <div>
+                                            <div>
+                                                <img src={curElm.image} alt={curElm.Name} />
+                                            </div>
+                                            <button onClick={() => closeModal()}>
+                                                <AiFillCloseCircle />
+                                            </button>
+                                        </div>
+                                    </ModalProduct>
+                                )}
                             </>
                         )
                     })
