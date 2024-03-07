@@ -17,7 +17,7 @@ export const ProductContainer = styled.div`
                         width: 12.1rem;
                         height: 18.4rem;
                         padding: .6rem .6rem;
-                        border: 4px solid #f6f6f6;
+                        border: 4px solid ${props => props.theme['gray-100']};
                         margin-top: 1.2rem;
                         margin-left: 1.2rem;
                         overflow: hidden;
@@ -39,13 +39,27 @@ export const ProductContainer = styled.div`
                                 margin-top: 0.6rem;
                                 transition: 0.3s;
 
+                                  .icon_box_add {
+                                    padding: 0.6rem 0.6rem;
+                                    margin-top: 0.5rem;
+                                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px ;
+                                    z-index: 1;
+                                    transition: 0.4s;
+                                    border: none;
+                                    color: ${props => props.theme['white']};
+                                    background: ${props => props.theme['pink']};
+
+                                    border-radius: 12px;
+                                    cursor: pointer;
+                                } 
+
                                 .icon_box {
                                     padding: 0.6rem 0.6rem;
                                     margin-top: 0.5rem;
                                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px ;
                                     z-index: 1;
-                                    background: #fff;
-                                    color: #cd1e76;
+                                    background: ${props => props.theme['white']};
+                                    color: ${props => props.theme['pink']};
                                     transition: 0.4s;
                                     border: none;
 
@@ -53,10 +67,10 @@ export const ProductContainer = styled.div`
                                     cursor: pointer;
 
 
-                                    &:hover {
-                                        color: #fff;
-                                        background: #cd1e76;
-                                    }
+                                     &:hover {
+                                        color: ${props => props.theme['white']};
+                                        background: ${props => props.theme['pink']};
+                                    } 
                                 }
                             }
                         }
@@ -68,13 +82,13 @@ export const ProductContainer = styled.div`
                             h3 {
                                 text-transform: uppercase;
                                 font-size: 0.8rem;
-                                color: #232323;
+                                color: ${props => props.theme['gray-800']};
                                 font-weight: 300;
                                 letter-spacing: 1px;
                             }
 
                             p {
-                                color: #cd1e76;
+                                color: ${props => props.theme['pink']};
                                 margin-top: 0.3rem;
                                 font-size: 0.8rem;
                                 letter-spacing: 1px;
@@ -86,16 +100,16 @@ export const ProductContainer = styled.div`
                                 padding: 0.6rem 1.2rem;
                                 border: none;
                                 background: none;
-                                background: #232323;
-                                color: #fff;
+                                background: ${props => props.theme['gray-800']};
+                                color: ${props => props.theme['white']};
                                 text-transform: capitalize;
                                 border-radius: 5px;
                                 cursor: pointer;
                                 transition: 0.3s;
 
                                 &:hover {
-                                    background-color: #cd1e76;
-                                    color: #fff;
+                                    background-color: ${props => props.theme['pink']};
+                                    color: ${props => props.theme['white']};
                                 }
                             }
                         }
@@ -131,7 +145,7 @@ export const ModalProduct = styled.div`
         transition: 0.3s;
 
         &:hover {
-            color: #cd1e76;
+            color: ${props => props.theme['pink']};
         }
     }
     

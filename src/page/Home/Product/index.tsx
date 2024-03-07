@@ -18,6 +18,9 @@ export function Product({ trendingProduct }: ProductProps) {
     const [modal, setModal] = useState(false)
     const [selectedProduct, setSelectedProduct] = useState<number | null>(null)
 
+    const [cart, setCart] = useState<ProductType[]>([])
+    const [liked, setLiked] = useState<boolean>(false)
+
     function openModal(EyeProduct: number) {
         setSelectedProduct(EyeProduct);
         setModal(true)
@@ -27,6 +30,20 @@ export function Product({ trendingProduct }: ProductProps) {
         setSelectedProduct(null)
         setModal(false)
     }
+
+    const handleClickLike = (obj: ProductType) => {
+        const element = cart.find((e) => e.id === obj.id)
+        if (element) {
+            const arrFilter = cart.filter((e) => e.id != obj.id)
+            setCart(arrFilter)
+            setLiked(true)
+        } else {
+            setCart([...cart, obj])
+            setLiked(false)
+        }
+    }
+
+
 
     return (
         <ProductContainer className="products">
@@ -42,9 +59,21 @@ export function Product({ trendingProduct }: ProductProps) {
                                             <button onClick={() => openModal(curElm.id)} className="icon_box">
                                                 <AiFillEye />
                                             </button>
-                                            <button className="icon_box">
+                                            {
+                                                cart.some((itemLike) => itemLike.id === curElm.id) ? (
+                                                    <button 
+                                                onClick={() => handleClickLike(curElm)} 
+                                                className={liked ? "icon_box" : "icon_box_add"}>
                                                 <AiFillHeart />
                                             </button>
+                                                ): (
+                                                    <button 
+                                                onClick={() => handleClickLike(curElm)} 
+                                                className="icon_box">
+                                                <AiFillHeart />
+                                            </button>
+                                                )
+                                            }
                                         </div>
                                     </div>
                                     <div className="info">

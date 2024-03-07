@@ -24,19 +24,19 @@ export const HomeContainer = styled.main`
                 text-transform: capitalize;
                 letter-spacing: 1px;
                 font-weight: 300;
-                color: #cd1e76;
+                color: ${props => props.theme['pink']};
             }
 
             h2 {
                 text-transform: uppercase;
-                color: #232323;
+                color: ${props => props.theme['gray-800']};
                 letter-spacing: 1px;
                 font-size: 2.6rem;
                 margin-top: 0.5rem;
             }
 
             p {
-                color: #232323;
+                color: ${props => props.theme['gray-800']};
                 letter-spacing: 1px;
                 margin-top: 0.5rem;
                 margin-bottom: 1.8rem;
@@ -47,15 +47,15 @@ export const HomeContainer = styled.main`
 
 export const NavLink = styled(Link)`
     padding: 0.7rem 1.8rem;
-    background: #fed700;
-    color: #232323;
+    background: ${props => props.theme['yellow']};
+    color: ${props => props.theme['gray-800']};
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
 
     &:hover {
-        color: #fff;
-        background: #cd1e76;
+        color: ${props => props.theme['white']};
+        background: ${props => props.theme['pink']};
     }
 `
 
@@ -77,14 +77,14 @@ export const Trending = styled.section`
                 display: flex;
                 max-width: 100%;
                 padding: 0.6rem 0.6rem;
-                background: #f6f7f8;
+                background: ${props => props.theme['gray-100']};
                 justify-content: space-between;
 
                 .heading {
                     h2 {
                         text-transform: uppercase;
                         font-size: 1rem;
-                        color: #232323;
+                        color: ${props => props.theme['gray-800']};
                         margin-top: 0.3rem;
                     }
                 }
@@ -96,13 +96,13 @@ export const Trending = styled.section`
                     h3 {
                         text-transform: capitalize;
                         margin-right: 0.6rem;
-                        color: #232323;
+                        color: ${props => props.theme['gray-800']};
                         font-size: 0.9rem;
                         cursor: pointer;
                         transition: 0.3s;
 
                         &:hover {
-                            color: #cd1e76;
+                            color: ${props => props.theme['pink']};
                         }
                     }
                 }
@@ -121,16 +121,16 @@ export const Trending = styled.section`
                 
                 .testimonial{
                     width: 100%;
-                    border: 1px solid #f6f7f8;
+                    border: 1px solid ${props => props.theme['gray-100']};
 
                     .head {
                         padding: 0.6rem 0.6rem;
                         width: 100%;
-                        background: #f6f7f8;
+                        background: ${props => props.theme['gray-100']};
 
                         h3 {
                             text-align: center;
-                            color: #232323;
+                            color: ${props => props.theme['gray-800']};
                             font-size: 1rem;
                             text-transform: uppercase;
                             margin-top: 0.6rem;
@@ -157,14 +157,14 @@ export const Trending = styled.section`
                                 text-align: center;
                                 text-transform: uppercase;
                                 font-size: 0.9rem;
-                                color: #232323;
+                                color: ${props => props.theme['gray-800']};
                             }
 
                             h4 {
                                 text-align: center;
                                 font-size: 0.8rem;
                                 margin-top: 0.7rem;
-                                color: #cd1e76;
+                                color: ${props => props.theme['pink']};
                                 font-weight: 300;
                                 text-transform: uppercase;
                             }
@@ -173,7 +173,7 @@ export const Trending = styled.section`
                                 margin-top: 0.6rem;
                                 text-align: center;
                                 font-weight: 600;
-                                color: #232323;
+                                color: ${props => props.theme['gray-800']};
                                 font-size: 0.9rem;
                                 margin-bottom: 1.2rem;
                             }
@@ -186,7 +186,7 @@ export const Trending = styled.section`
 `
 export const NewsLetter = styled.section`
         width: 100%;
-        background: #f6f7f8;
+        background: ${props => props.theme['gray-100']};
         margin-top: 1.2rem;
         padding: 0.6rem;
 
@@ -196,7 +196,7 @@ export const NewsLetter = styled.section`
 
             h3 {
                 text-align: center;
-                color: #232323;
+                color: ${props => props.theme['gray-800']};
                 font-size: 1rem;
                 text-transform: uppercase;
                 letter-spacing: 1px;
@@ -210,7 +210,7 @@ export const NewsLetter = styled.section`
             p {
                 text-align: center;
                 text-transform: capitalize;
-                color: #8a8a8a;
+                color: ${props => props.theme['gray-500']};
             }
 
             input {
@@ -219,8 +219,8 @@ export const NewsLetter = styled.section`
                 padding: 0.6rem;
                 background: none;
                 outline: none;
-                border: 1px solid #8a8a8a;
-                color: #232323;
+                border: 1px solid ${props => props.theme['gray-500']};
+                color: ${props => props.theme['gray-800']};
                 border-radius: 4px;
             }
 
@@ -231,8 +231,8 @@ export const NewsLetter = styled.section`
                 border: none;
                 background: none;
                 outline: none;
-                background: #fed700;
-                color: #232323;
+                background: ${props => props.theme['yellow']};
+                color: ${props => props.theme['gray-800']};
                 font-weight: 600;
                 border-radius: 8px;
                 cursor: pointer;
@@ -255,27 +255,27 @@ export const NewsLetter = styled.section`
 `
 
 export const LogoFacebook = styled(BiLogoFacebook)`
- color: #fff;
- background-color: #3b5998;
+ color: ${props => props.theme['white']};
+ background-color: ${props => props.theme['blueTwo']};
  border-radius: 4px;
  transition: 0.6s;
 
         &:hover {
-            color: #3b5998;
-            background-color: #fff;
-            border: 1px solid #3b5998;
+            color: ${props => props.theme['blueTwo']};
+            background-color: ${props => props.theme['white']};
+            border: 1px solid ${props => props.theme['blueTwo']};
         }
 `
 
 export const LogoTwitter = styled(BiLogoTwitter)`
-    color: #00acee;
+    color: ${props => props.theme['blue']};
     background: none;
     border-radius: 4px;
     transition: 0.6s;
 
         &:hover {
             color: #fff;
-            background: #00acee;
+            background: ${props => props.theme['blue']};
         }
 `
 
@@ -291,8 +291,8 @@ export const LogoInstagram = styled(BiLogoInstagram)`
 `
 
 export const LogoYoutube = styled(BiLogoYoutube)`
-    color: #c4302b;
-    background-color: #fff;
+    color: ${props => props.theme['red']};
+    background-color: ${props => props.theme['white']};
     border-radius: 4px;
 `
 
@@ -303,15 +303,15 @@ export const ShowMore = styled.button`
     background: none;
     outline: none;
     border: none;
-    color: #ffff;
+    color: ${props => props.theme['white']};
     font-weight: 600;
-    background: #232323;
+    background: ${props => props.theme['gray-800']};
     border-radius: 4px;
     cursor: pointer;
     transition: 0.5s;
 
     &:hover {
-        background: #fed700;
+        background: ${props => props.theme['yellow']};
     }
 
     /* video 1:31:29 https://www.youtube.com/watch?v=054qYbsxyXw */
@@ -330,10 +330,8 @@ export const Banners = styled.section`
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            margin: 0 1.5rem 0 0;
 
-            .box {
-                margin-top: 0.6rem;
-            }
         }
 
         .right_box {
@@ -343,11 +341,10 @@ export const Banners = styled.section`
                 max-width: 100%;
                 display: flex;
                 justify-content: space-between;
-                margin-top: 0.6rem;
                 height: 25vh;
 
              img:first-child {
-                width: 78%;
+                width: 77%;
             }
             }
 
@@ -376,17 +373,17 @@ export const ProductType = styled.section`
         .box {
             width: 22.5rem;
             height: max-content;
-            border: 3px solid #f6f7f8;
+            border: 3px solid ${props => props.theme['gray-100']};
             overflow: hidden;
             
             .header {
                 width: 100%;
                 height: 3.1rem;
-                background: #f6f6f6;
+                background: ${props => props.theme['gray-100']};
                 padding: 0.6rem;
 
                 h2 {
-                    color: #232323;
+                    color: ${props => props.theme['gray-800']};
                     font-size: 1rem;
                     text-transform: uppercase;
                     font-weight: 600;
@@ -397,7 +394,7 @@ export const ProductType = styled.section`
                 width: 100%;
                 height: 6.8rem;
                 padding: 0.6rem 0.6rem;
-                border: 1px solid #f6f7f8;
+                border: 1px solid ${props => props.theme['gray-100']};
                 display: flex;
 
                 .img_box img {
@@ -411,14 +408,14 @@ export const ProductType = styled.section`
 
                     h3 {
                         font-size: 0.9rem;
-                        color: #8a8a8a;
+                        color: ${props => props.theme['gray-500']};
                         text-transform: uppercase;
                         letter-spacing: 1px;
                     }
 
                     p {
                         margin-top: 0.3rem;
-                        color: #cd1e76;
+                        color: ${props => props.theme['pink']};
                         letter-spacing: 1px;
                         font-weight: 600;
                         font-size: 0.8rem;
@@ -433,16 +430,16 @@ export const ProductType = styled.section`
                             outline: none;
                             border: none;
                             padding: 0.4rem 1rem;
-                            border: 2px solid #f6f7f8;
+                            border: 2px solid ${props => props.theme['gray-100']};
                             margin-left: 0.6rem;
                             border-radius: 16px;
-                            color: #8a8a8a;
+                            color: ${props => props.theme['gray-500']};
                             cursor: pointer;
                             transition: 0.3s;
 
                             &:hover {
-                                border: 2px solid #000;
-                                color: #000;
+                                border: 2px solid ${props => props.theme['black']};
+                                color: ${props => props.theme['black']};
                             }
                         }
                     }

@@ -7,14 +7,14 @@ export const ContainerShop = styled.main`
     > h2 {
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: #232323;
+        color: ${props => props.theme['gray-800']};
         font-size: 2rem;
         font-weight: 300;
     }
 
     > p {
         margin-top: 0.3rem;
-        color: #8a8a8a;
+        color: ${props => props.theme['gray-500']};
         font-size: 0.9rem;
         font-weight: 600;
     }
@@ -29,17 +29,17 @@ export const ContainerShop = styled.main`
                 width: 25%;
 
                 .category {
-                    border: 3px solid #f6f6f6;
+                    border: 3px solid ${props => props.theme['gray-100']};
                     width: 15.6rem;
 
                     .header {
                         max-width: 100%;
                         padding: 0.6rem 1.2rem;
-                        background: #f6f6f6;
+                        background: ${props => props.theme['gray-100']};
 
                         h3 {
                             font-size: 1rem;
-                            color: #232323;
+                            color: ${props => props.theme['gray-800']};
                             letter-spacing: 1px;
                             text-transform: uppercase;
                         }
@@ -60,13 +60,13 @@ export const ContainerShop = styled.main`
                                 margin-top: 0.3rem;
                                 font-size: 0.9rem;
                                 font-weight: 600;
-                                color: #8a8a8a;
+                                color: ${props => props.theme['gray-500']};
                                 letter-spacing: 1px;
                                 cursor: pointer;
                                 transition: 0.5s;
 
                                 &:hover {
-                                    color: #232323;
+                                    color: ${props => props.theme['gray-800']};
                                 }
                             }
                         }
@@ -101,7 +101,7 @@ export const ContainerShop = styled.main`
                     padding: 0.6rem 0.6rem;
 
                     h2 {
-                        color: #232323;
+                        color: ${props => props.theme['gray-800']};
                         text-transform: uppercase;
                         letter-spacing: 1px;
                         font-size: 1.3rem;
@@ -118,7 +118,7 @@ export const ContainerShop = styled.main`
                             width: 16.8rem;
                             height: 24.3rem;
                             overflow: hidden;
-                            border: 3px solid #f6f6f6;
+                            border: 3px solid ${props => props.theme['gray-100']};
                             margin-left: 0.9rem;
                             margin-top: 1.2rem;
 
@@ -144,14 +144,14 @@ export const ContainerShop = styled.main`
                                     
                                     li {
                                         box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
-                                        border: 2px solid #f6f6f6;
+                                        border: 2px solid ${props => props.theme['gray-100']};
                                         margin-top: 0.6rem;
                                         list-style: none;
                                         padding: 0.6rem;
-                                        color: #8a8a8a;
+                                        color: ${props => props.theme['gray-500']};
                                         cursor: pointer;
                                         transition: 0.5s;
-                                        background: #fff;
+                                        background: ${props => props.theme['white']};
                                         transition: 0.5s;
 
                                         &:hover {
@@ -170,7 +170,7 @@ export const ContainerShop = styled.main`
 
                                 h3 {
                                     text-align: center;
-                                    color: #232323;
+                                    color: ${props => props.theme['gray-800']};
                                     font: 1rem;
                                     font-weight: 600;
                                     text-transform: capitalize;
@@ -179,7 +179,7 @@ export const ContainerShop = styled.main`
                                 p {
                                     margin-top: 0.3rem;
                                     text-align: center;
-                                    color: #cd1e76;
+                                    color: ${props => props.theme['pink']};
                                     font-size: 0.8rem;
                                 }
 
@@ -188,16 +188,16 @@ export const ContainerShop = styled.main`
                                     padding: 0.6rem 1.2rem;
                                     border: none;
                                     outline: none;
-                                    background: #232323;
-                                    color: #fff;
+                                    background: ${props => props.theme['gray-800']};
+                                    color: ${props => props.theme['white']};
                                     font-weight: bold;
                                     border-radius: 8px;
                                     cursor: pointer;
                                     transition: 0.3s;
 
                                     &:hover {
-                                        background: #fed700;
-                                        color: #fff;
+                                        background: ${props => props.theme['yellow']};
+                                        color: ${props => props.theme['white']};
                                     }
                                 }
 

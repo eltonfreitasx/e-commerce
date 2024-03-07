@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ContainerFooter = styled.footer`
     width: 100%;
     padding: 1.2rem 1.8rem;
-    background: #f6f6f6;
+    background: ${props => props.theme['gray-100']};
 
     .container {
         display: flex;
@@ -12,7 +12,7 @@ export const ContainerFooter = styled.footer`
         .left_box {
             width: 30%;
             padding: 1.2rem;
-            border-right: 2px solid #b8b7b7;
+            border-right: 2px solid ${props => props.theme['gray-400']};
 
             .box {
                 display: flex;
@@ -21,7 +21,7 @@ export const ContainerFooter = styled.footer`
 
                 .icon_box {
                     font-size: 1.6rem;
-                    color: #cd1e76;
+                    color: ${props => props.theme['pink']};
                 }
 
                 .detail {
@@ -30,14 +30,14 @@ export const ContainerFooter = styled.footer`
                     h3 {
                         text-transform: uppercase;
                         font-size: 1rem;
-                        color: #cd1e76;
+                        color: ${props => props.theme['pink']};
                         font-weight: 600;
                         letter-spacing: 1px;
                     }
 
                     p {
                         font-size: 0.8rem;
-                        color: #232323;
+                        color: ${props => props.theme['gray-800']};
                     }
                 }
             }
@@ -60,7 +60,7 @@ export const ContainerFooter = styled.footer`
                     font-size: 0.8rem;
                     text-align: center;
                     font-weight: 600;
-                    color: #8a8a8a;
+                    color: ${props => props.theme['gray-500']};
                 }
             }
 
@@ -76,7 +76,7 @@ export const ContainerFooter = styled.footer`
 
                     h3 {
                         text-transform: uppercase;
-                        color: #232323;
+                        color: ${props => props.theme['gray-800']};
                         font-size: 0.8rem;
                         letter-spacing: 1px;
                     }
@@ -87,7 +87,7 @@ export const ContainerFooter = styled.footer`
                         li {
                             list-style: none;
                             margin-top: 0.3rem;
-                            color: #8a8a8a;
+                            color: ${props => props.theme['gray-500']};
                             text-transform: capitalize;
                             letter-spacing: 1px;
                             font-size: 0.75rem;
@@ -96,7 +96,7 @@ export const ContainerFooter = styled.footer`
                             transition: 0.3s;
 
                             &:hover {
-                                color: #cd1e76; 
+                                color: ${props => props.theme['pink']}; 
                             }
                         }
                     }

@@ -11,19 +11,19 @@ export const Header = styled.header`
         max-width: 100%;
         display: flex;
         padding: 0.6rem;
-        background-color: #f6f7f8;
+        background-color: ${props => props.theme['gray-100']};
     }
 
     .header .top_header .icon {
         margin-left: 1.25rem;
         margin-right: 0.5rem;
-        color: #ababab;
+        color: ${props => props.theme['gray-400']};
         font-size: 1.18rem;
     }
 
     .header .top_header .info p {
         margin-left: 0%.6rem;
-        color: #8a8a8a;
+        color: ${props => props.theme['gray-500']};
     }
 
     .header .mid_header {
@@ -52,7 +52,7 @@ export const Header = styled.header`
         border-top-left-radius: 5px;
         width: 15.625rem;
         border: none;
-        background: #f6f7f8;
+        background: ${props => props.theme['gray-100']};
     }
 
     .header .mid_header .search_box button {
@@ -62,8 +62,8 @@ export const Header = styled.header`
         border: none;
         outline: none;
         width: 3.12rem;
-        background: #cd1e76;
-        color: #fff;
+        background: ${props => props.theme['pink']};
+        color: ${props => props.theme['white']};
         cursor: pointer;
         margin-right: 1.8rem;
         transition: 0.5s;
@@ -71,8 +71,8 @@ export const Header = styled.header`
     }
 
     .header .mid_header .search_box button:hover {
-        background: #fed700;
-        color: #cd1e76;
+        background: ${props => props.theme['yellow']};
+        color: ${props => props.theme['pink']};
     }
 
     .header .mid_header .user {
@@ -98,7 +98,7 @@ export const Header = styled.header`
         width: 100%;
         padding: 0.6rem 0.6rem;
         display: flex;
-        background: #232323;
+        background: ${props => props.theme['gray-800']};
         justify-content: space-between;
     }
 
@@ -126,7 +126,7 @@ export const Header = styled.header`
     }
 
     .header .last_header .offer {
-        background: #fed700;
+        background: ${props => props.theme['yellow']};
         border-radius: 0.6rem;
         margin-right: 1.25rem;
         padding: 0.6rem 1.2rem;
@@ -135,7 +135,7 @@ export const Header = styled.header`
 
         p {
             text-transform: uppercase;
-            color: #232323;
+            color: ${props => props.theme['gray-800']};
             font-weight: 600;
             font-size: 0.8rem;
         }
@@ -145,11 +145,11 @@ export const Header = styled.header`
 export const NavLink = styled(Link)`
     margin-right: 1.2rem;
     text-decoration: none;
-    color: #fff;
+    color: ${props => props.theme['white']};
     font-weight: 600;
     transition: 0.3s;
 
     &:hover {
-        color: #fed700;
+        color: ${props => props.theme['yellow']};
     }
 `

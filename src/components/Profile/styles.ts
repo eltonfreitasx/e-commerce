@@ -5,7 +5,7 @@ export const ProfileInfo = styled.div`
     margin-top: 0.6rem;
 
     .icon {
-        background: #fff;
+        background: ${props => props.theme['white']};
         border-radius: 0.6rem;
         display: flex;
         align-items: center;
@@ -25,12 +25,12 @@ export const ProfileInfo = styled.div`
         margin-left: 10px;
 
         h2 {
-            color: #fff;
+            color: ${props => props.theme['white']};
             font-size: 1.1rem;
         }
 
         p {
-            color: #ababab;
+            color: ${props => props.theme['gray-400']};
             font-size: 0.9rem;
         }
     }
