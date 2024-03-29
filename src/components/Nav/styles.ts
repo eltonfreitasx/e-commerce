@@ -1,10 +1,30 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
 
+export const Opacity = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+`
+
+export const infoAnimation = keyframes`
+    from {
+        left: -0%;
+    }
+
+   to {
+        left: 100%;
+   }
+`
 
 export const Header = styled.header`
     .header {
         width: 100%;
+        animation: ${Opacity} ease 2s;
+        
     }
 
     .header .top_header {
@@ -19,6 +39,10 @@ export const Header = styled.header`
         margin-right: 0.5rem;
         color: ${props => props.theme['gray-400']};
         font-size: 1.18rem;
+    }
+
+    .header .top_header .info {
+        width: 100%;
     }
 
     .header .top_header .info p {
@@ -95,8 +119,7 @@ export const Header = styled.header`
     }
 
     .header .last_header {
-        width: 100%;
-        padding: 0.6rem 0.6rem;
+        padding: 0.6rem 2.5rem;
         display: flex;
         background: ${props => props.theme['gray-800']};
         justify-content: space-between;
@@ -128,7 +151,6 @@ export const Header = styled.header`
     .header .last_header .offer {
         background: ${props => props.theme['yellow']};
         border-radius: 0.6rem;
-        margin-right: 1.25rem;
         padding: 0.6rem 1.2rem;
         display: flex;
         align-items: center;

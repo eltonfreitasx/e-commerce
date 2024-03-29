@@ -1,10 +1,20 @@
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoYoutube } from 'react-icons/bi';
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import slide from './../../assets/slide-1.webp'
 import { Link } from 'react-router-dom'
 
+export const Opacity = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+`
+
 export const HomeContainer = styled.main`
     width: 100%;
+    animation: ${Opacity} ease 3s;
 
     .top_banner {
         background: url(${slide});

@@ -7,7 +7,7 @@ import React from 'react'
 import { GlobalStyle } from './themes/styles/globo.ts'
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './themes/default.ts';
-
+import { ProductProvider } from './context/ProductContext.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,18 +22,20 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
-      <Auth0Provider
-        domain="dev-0a0zt12rbqhp01w3.us.auth0.com"
-        clientId="DvaE9CDAPVxYf0XFuN6dwTz5Syz3Heeg"
-        authorizationParams={{
-          redirect_uri: window.location.origin
-        }}
-      >
-        <RouterProvider router={router}>
-        </RouterProvider>
-      </Auth0Provider>,
-    </ThemeProvider>
-  </React.StrictMode>,
+    <ProductProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyle />
+        <Auth0Provider
+          domain="dev-0a0zt12rbqhp01w3.us.auth0.com"
+          clientId="DvaE9CDAPVxYf0XFuN6dwTz5Syz3Heeg"
+          authorizationParams={{
+            redirect_uri: window.location.origin
+          }}
+        >
+          <RouterProvider router={router}>
+          </RouterProvider>
+        </Auth0Provider>
+      </ThemeProvider>
+    </ProductProvider>
+  </React.StrictMode>
 )

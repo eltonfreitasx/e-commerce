@@ -41,6 +41,7 @@ export function Home() {
 
   const [trendingProduct, setTrendigProduct] = useState(Homeproduct)
 
+
   const filtercate = (item: string) => {
     const filterproduct = Homeproduct.filter((curElm) => {
       return curElm.type === item
@@ -48,11 +49,11 @@ export function Home() {
     setTrendigProduct(filterproduct)
   }
 
-  const filtercateAll = (item: string) => {
-    const filterproduct = Homeproduct.filter((curElm) => {
-      return curElm.cat === item
-    })
-    setTrendigProduct(filterproduct)
+  const filtercateAll = () => {
+    // const filterproduct = Homeproduct.filter((curElm) => {
+    //   return curElm.cat === item
+    // })
+    setTrendigProduct(Homeproduct)
   }
 
   useEffect(() => {
@@ -97,7 +98,7 @@ export function Home() {
                 <h2>trending product</h2>
               </div>
               <div className="cate">
-                <h3 onClick={() => filtercateAll('')}>All</h3>
+                <h3 onClick={() => filtercateAll()}>All</h3>
                 <h3 onClick={() => filtercate('new')}>New</h3>
                 <h3 onClick={() => filtercate('featured')}>Featured</h3>
                 <h3 onClick={() => filtercate('top')}>top selling</h3>

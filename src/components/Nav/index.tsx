@@ -1,5 +1,5 @@
 import { MdLocalShipping } from 'react-icons/md';
-import { AiOutlineSearch } from 'react-icons/ai';
+// import { AiOutlineSearch } from 'react-icons/ai';
 import { FiLogIn } from 'react-icons/fi';
 import { Header, NavLink } from './styles';
 import logo from './../../assets/logo.webp';
@@ -8,9 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Profile } from '../Profile';
 export function Nav() {
     const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
-
     // 2:43:20
-
     return (
         <Header>
             <div className="header">
@@ -26,16 +24,16 @@ export function Nav() {
                     <div className="logo">
                         <img src={logo} alt="logo" />
                     </div>
-                    <div className="search_box">
+                    {/* <div className="search_box">
                         <input
                             placeholder="search"
                             type="text"
-                            value={'search'}
+                            value=""
                         />
                         <button>
                             <AiOutlineSearch />
                         </button>
-                    </div>
+                    </div> */}
                     {isAuthenticated ?
                         <div className="user">
                             <div className="icon">
@@ -64,7 +62,7 @@ export function Nav() {
                         <ul>
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/shop">Shop</NavLink></li>
-                            <li><NavLink to="/collection">collection</NavLink></li>
+                            {/* <li><NavLink to="/collection">collection</NavLink></li> */}
                             <li><NavLink to="/about">About</NavLink></li>
                             <li><NavLink to="/contact">Contact</NavLink></li>
                         </ul>

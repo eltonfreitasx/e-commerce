@@ -136,8 +136,8 @@ export const ModalProduct = styled.div`
 
     button {
         position: relative;
-        bottom: 245px;
-        left: 600px;
+        bottom: 14rem;
+        left: 46.5%;
         background: none;
         border: none;
         font-size: 1.25rem;
