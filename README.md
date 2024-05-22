@@ -14,6 +14,11 @@
 
 ### 🛠️ Technologies <hr/>
 
+        "@auth0/auth0-react": "^2.2.4",
+        "react-icons": "^5.0.1",
+        "react-router-dom": "^6.22.1",
+        "styled-components": "^6.1.8"
+
 React with type script<br/>
 
 ## 🧲 Requirements 
