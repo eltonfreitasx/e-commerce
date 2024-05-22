@@ -1,7 +1,6 @@
 # E-commerce
 
-### Este é um teste de condificação da CodeLeap. O objetivo é criar um aplicativo muito simples que execute funções de CRUD básicas. <br/>
-#### É uma aplicativo front-end criado com React com Typescript com o sevidor de teste https://dev.codeleap.co.uk/careers<br/><br/>
+###  É uma aplicativo front-end criado com NestJs, este é um e-commerce com venda de produtos tecnologicos. <br/>
 
 ### Preview <br/><hr/>
 
